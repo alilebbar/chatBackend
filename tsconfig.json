@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",                      // Version JS générée
+    "module": "commonjs",                    // Système de module pour Node.js
+    "rootDir": "src",                        // Dossier source de ton code TS
+    "outDir": "dist",                        // Dossier où ira le JS compilé
+    "esModuleInterop": true,                 // Pour permettre import de modules CommonJS
+    "strict": true,                          // Active les vérifications strictes
+    "moduleResolution": "node",              // Pour que les imports fonctionnent comme dans Node
+    "forceConsistentCasingInFileNames": true,// Pour éviter les erreurs sur les majuscules/minuscules
+    "skipLibCheck": true,                    // Ignore les erreurs dans node_modules
+    "lib": ["esnext"]                        // ❗ PAS "dom", évite les conflits de types
+  },
+  "include": ["src"],                        // Indique les fichiers à compiler
+  "exclude": ["node_modules"]                // Ignore node_modules
+}
